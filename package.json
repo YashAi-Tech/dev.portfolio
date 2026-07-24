@@ -1,14 +1,12 @@
 {
   "name": "yash-tonde-portfolio",
   "version": "1.0.0",
-  "description": "Portfolio imported from GitHub",
-  "main": "server.js",
+  "description": "Portfolio",
   "scripts": {
-    "build": "echo 'No build step required'",
-    "dev": "node server.js",
-    "start": "node server.js"
+    "dev": "vite",
+    "build": "vite build"
   },
-  "dependencies": {
-    "express": "^4.21.0"
+  "devDependencies": {
+    "vite": "^5.2.0"
   }
 }
