@@ -108,7 +108,23 @@
     .exp-card:hover { box-shadow:0 25px 50px rgba(88,28,135,0.5); transform:translateY(-2px); }
     .exp-card > * { position:relative; z-index:2; }
     .exp-card-content { width:100%; }
-    .exp-card-icon { display:none !important; }
+    .exp-card-icon {
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 50%;
+      border: 1px solid rgba(168, 85, 247, 0.3);
+      padding: 6px;
+      margin-bottom: 0.25rem;
+    }
+    .exp-card-icon img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
     .exp-card-title { font-size:1.125rem; font-weight:600; color:#fff; margin-bottom:0.25rem; }
     .exp-card-company { color:#c084fc; font-size:0.95rem; font-weight:600; margin-bottom:0.25rem; }
     .exp-card-date { color:rgba(255,255,255,0.75); font-size:0.875rem; margin-bottom:0.75rem; }
@@ -124,7 +140,7 @@
     #about { padding:5rem 1.5rem; }
     .about-quote { font-size:clamp(1.25rem,3vw,1.5rem); max-width:60rem; margin:0 auto 2rem; text-align:center; line-height:1.7; }
     .illustration-wrap { max-width:960px; margin:0 auto; padding:0 1rem; }
-    .illustration-wrap img { display:none; }
+    .illustration-wrap img { display:block; margin:0 auto; }
     #logo-loop-root { display:flex; justify-content:center; }
     #logo-loop-component { min-height: 120px; width:100%; display:flex; justify-content:center; }
 
@@ -480,7 +496,7 @@
 
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  document.querySelectorAll('.exp-card-icon').forEach((icon) => icon.remove());
+
 
   document.querySelectorAll('.exp-card').forEach((card) => {
     card.addEventListener('pointermove', (event) => {
