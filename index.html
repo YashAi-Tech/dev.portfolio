@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <title>Yash Tonde - Website Designer & UI/UX Designer</title>
-  <meta name="description" content="Website Designer, UI/UX Designer & Vibe Coder. Designing modern digital experiences with creativity, clean code, and AI-powered workflows." />
-  <meta name="keywords" content="Yash Tonde, Website Designer, UI/UX Designer, Frontend Developer, Vibe Coder" />
+  <title>Yash Tonde - Founder of InfusedPath | Website & UI/UX Designer | Automation Builder</title>
+  <meta name="description" content="Founder of InfusedPath (Automation Builder Agency), Website Designer, UI/UX Designer & Vibe Coder. Building product launch automations and modern digital experiences." />
+  <meta name="keywords" content="Yash Tonde, InfusedPath, Automation Builder Agency, Product Launch Automation, Website Designer, UI/UX Designer, Frontend Developer, Vibe Coder" />
   <meta name="author" content="Yash Tonde" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -150,22 +150,98 @@
     .project-block { margin-bottom:5rem; }
     .project-block:last-child { margin-bottom:0; }
     .project-grid { display:grid; grid-template-columns:1fr; gap:2rem; align-items:center; }
-    @media(min-width:1024px){ .project-grid { grid-template-columns:1fr 1fr; gap:3rem; } }
-    .project-label { color:#a855f7; font-size:1.125rem; font-weight:500; margin-bottom:0.5rem; }
-    .project-title { font-size:clamp(1.75rem,4vw,2.25rem); font-weight:700; color:#fff; margin-bottom:1.5rem; }
-    .project-desc-card {
-      background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.1));
-      backdrop-filter:blur(12px); border-radius:1rem; padding:1.5rem 2rem;
-      border:1px solid rgba(255,255,255,0.1); box-shadow:0 4px 24px rgba(0,0,0,0.3);
-      margin-bottom:1.5rem;
+    @media(min-width:1024px){ .project-grid { grid-template-columns:1.05fr 1fr; gap:3.5rem; } }
+    .project-label-row { display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap; margin-bottom:0.75rem; }
+    .project-label { color:#a855f7; font-size:1.05rem; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+    .project-badge-pill {
+      display:inline-flex; align-items:center; gap:0.4rem;
+      background:rgba(16,185,129,0.15); border:1px solid rgba(16,185,129,0.4);
+      color:#34d399; font-size:0.78rem; font-weight:600; padding:0.25rem 0.75rem; border-radius:1rem;
     }
-    .project-desc-card p { color:rgba(255,255,255,0.9); font-size:1rem; line-height:1.75; }
+    .badge-dot { width:6px; height:6px; background:#34d399; border-radius:50%; box-shadow:0 0 8px #34d399; animation:pulse-dot 2s infinite; }
+    @keyframes pulse-dot { 0%,100%{ opacity:1; transform:scale(1); } 50%{ opacity:0.5; transform:scale(0.8); } }
+    .project-title { font-size:clamp(1.75rem,3.8vw,2.35rem); font-weight:700; color:#fff; line-height:1.2; margin-bottom:1.25rem; }
+    .project-title .accent-emerald { color:#34d399; }
+    .project-desc-card {
+      background:linear-gradient(135deg,rgba(255,255,255,0.05),rgba(255,255,255,0.02));
+      backdrop-filter:blur(16px); border-radius:1rem; padding:1.5rem 1.75rem;
+      border:1px solid rgba(255,255,255,0.1); box-shadow:0 12px 32px rgba(0,0,0,0.4);
+      margin-bottom:1.25rem;
+    }
+    .project-desc-card p { color:rgba(255,255,255,0.88); font-size:0.98rem; line-height:1.75; margin-bottom:1rem; }
+    .project-desc-card p:last-child { margin-bottom:0; }
+    .project-features { list-style:none; display:grid; gap:0.65rem; margin-top:0.75rem; }
+    .project-features li { display:flex; align-items:flex-start; gap:0.6rem; color:rgba(255,255,255,0.85); font-size:0.92rem; line-height:1.55; }
+    .project-features li svg { flex-shrink:0; margin-top:0.2rem; color:#34d399; }
+    .project-tags { display:flex; flex-wrap:wrap; gap:0.5rem; margin-bottom:1.5rem; }
+    .project-tag {
+      background:rgba(168,85,247,0.12); border:1px solid rgba(168,85,247,0.25);
+      border-radius:0.5rem; padding:0.3rem 0.75rem;
+      color:#e9d5ff; font-size:0.8rem; font-weight:500;
+    }
+    .project-tag.tag-emerald {
+      background:rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.25);
+      color:#a7f3d0;
+    }
+    .project-actions { display:flex; flex-wrap:wrap; align-items:center; gap:0.85rem; }
+    .project-btn {
+      display:inline-flex; align-items:center; gap:0.5rem;
+      font-size:0.9rem; font-weight:600; padding:0.65rem 1.4rem;
+      border-radius:2rem; transition:all .25s ease;
+    }
+    .btn-launch {
+      background:linear-gradient(135deg,#059669,#10b981);
+      color:#fff; box-shadow:0 4px 20px rgba(16,185,129,0.35);
+    }
+    .btn-launch:hover { opacity:0.92; transform:translateY(-2px); box-shadow:0 8px 24px rgba(16,185,129,0.5); }
+    .btn-terminal {
+      background:rgba(0,0,0,0.5); border:1px solid rgba(255,255,255,0.15);
+      color:#34d399; font-family:monospace; font-size:0.85rem; padding:0.65rem 1.1rem;
+    }
+    .btn-outline {
+      background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.2);
+      color:#fff;
+    }
+    .btn-outline:hover { background:rgba(255,255,255,0.14); border-color:rgba(168,85,247,0.5); }
     .project-coming-soon {
       display:inline-flex; align-items:center; gap:0.5rem;
       background:rgba(124,58,237,0.2); border:1px solid rgba(168,85,247,0.4);
       border-radius:2rem; padding:0.5rem 1.25rem;
       color:#c084fc; font-size:0.875rem; font-weight:500;
     }
+
+    /* Browser Mockup Frame for Project Image */
+    .project-browser-frame {
+      border-radius:1rem; overflow:hidden;
+      background:linear-gradient(135deg,#0d0618,#160b29,#0d0618);
+      border:1px solid rgba(168,85,247,0.3);
+      box-shadow:0 24px 60px rgba(0,0,0,0.6), 0 0 40px rgba(16,185,129,0.15);
+      transition:transform 0.4s ease, box-shadow 0.4s ease;
+    }
+    .project-browser-frame:hover {
+      transform:translateY(-4px);
+      box-shadow:0 30px 70px rgba(0,0,0,0.7), 0 0 50px rgba(16,185,129,0.25);
+    }
+    .browser-bar {
+      background:rgba(17,7,32,0.9);
+      padding:0.65rem 1rem;
+      display:flex; align-items:center; gap:0.75rem;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .browser-dots { display:flex; gap:0.4rem; }
+    .browser-dot { width:10px; height:10px; border-radius:50%; }
+    .dot-red { background:#ef4444; }
+    .dot-yellow { background:#f59e0b; }
+    .dot-green { background:#10b981; }
+    .browser-address {
+      flex:1; background:rgba(255,255,255,0.05);
+      border-radius:0.4rem; padding:0.2rem 0.75rem;
+      font-size:0.75rem; color:rgba(255,255,255,0.6);
+      display:flex; align-items:center; gap:0.4rem;
+    }
+    .browser-img-wrap { width:100%; overflow:hidden; background:#000; }
+    .browser-img { width:100%; height:auto; display:block; object-fit:cover; transition:transform 0.5s ease; }
+    .project-browser-frame:hover .browser-img { transform:scale(1.02); }
     .project-img-wrap {
       aspect-ratio:4/3; border-radius:1rem; overflow:hidden;
       background:linear-gradient(135deg,#0f0a1e,#1e0a38,#0f0a1e);
@@ -275,7 +351,7 @@
     <div class="banner-lower">
       <p class="typing-line">I&apos;m a <span id="typed"></span><span class="cursor">|</span></p>
       <p class="banner-desc">
-        Designing modern digital experiences with creativity, clean code, and AI-powered workflows. I create responsive websites, intuitive user interfaces, and seamless user experiences that help brands and ideas stand out.
+        Designing modern digital experiences with creativity, clean code, and AI-powered workflows. As the founder of InfusedPath — an automation builder agency — I help startups and brands launch products faster with end-to-end strategy, intelligent workflows, and high-conversion UI/UX design.
       </p>
     </div>
   </div>
@@ -292,15 +368,16 @@
           <img src="data:image/png;base64,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" alt="Design" />
         </div>
         <div>
-          <h3 class="exp-card-title">Founder &amp; Website Developer</h3>
-          <p class="exp-card-company">InfusedPath</p>
+          <h3 class="exp-card-title">Founder &amp; Automation Architect</h3>
+          <p class="exp-card-company">InfusedPath — Automation Builder Agency</p>
           <p class="exp-card-date">July 2026 – Present</p>
           <ul class="exp-card-list">
-            <li>Founded and operate an AI-first digital agency specializing in website development, UI/UX design, and business automation.</li>
-            <li>Design and develop modern, responsive websites for startups and local businesses.</li>
-            <li>Build AI agents and workflow automation solutions to streamline business operations.</li>
+            <li>Founded and direct <strong>InfusedPath</strong>, an automation builder agency empowering startups and brands with end-to-end product launch automation, strategy, and scalable growth systems.</li>
+            <li>Architect multi-stage workflow automations connecting CRMs (HubSpot), real-time team alerts (Slack), email campaigns, and analytics tracking.</li>
+            <li>Engineer custom AI agents, CLI tooling (<code>infusedpath launch --init</code>), and high-conversion modern web interfaces.</li>
+            <li>Partner with founders to accelerate time-to-market by eliminating manual operational overhead through intelligent workflow systems.</li>
           </ul>
-          <p class="exp-card-skills"><strong>Technologies:</strong> React, Next.js, TypeScript, Tailwind CSS, Firebase, n8n, AI APIs, Vercel</p>
+          <p class="exp-card-skills"><strong>Technologies:</strong> Automation Architecture, Product Launches, n8n, AI APIs, Next.js, HubSpot CRM, Webhooks, Python, TypeScript</p>
         </div>
       </div>
 
@@ -381,19 +458,69 @@
     <div class="project-block">
       <div class="project-grid">
         <div>
-          <p class="project-label">Featured Project</p>
-          <h3 class="project-title">Currently Updating My Project Showcase</h3>
-          <div class="project-desc-card">
-            <p>Exciting projects and case studies will be added soon. I&apos;m crafting unique digital experiences that blend AI-powered workflows with clean, modern design principles.</p>
+          <div class="project-label-row">
+            <span class="project-label">Featured Showcase</span>
+            <span class="project-badge-pill">
+              <span class="badge-dot"></span>
+              Live Agency &bull; Founder & Lead
+            </span>
           </div>
-          <span class="project-coming-soon">
-            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
-            Coming Soon
-          </span>
+          <h3 class="project-title">InfusedPath &mdash; <span class="accent-emerald">Product Launch &amp; Business Automation Agency</span></h3>
+          
+          <div class="project-desc-card">
+            <p><strong>InfusedPath</strong> is an end-to-end automation builder agency helping startups and brands launch products faster through streamlined strategy, workflow automation, and scalable growth systems.</p>
+            <ul class="project-features">
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <span><strong>Product Launch Automation:</strong> Multi-stage launch playbooks, automated waitlists, and campaign event triggers.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                <span><strong>Full-Stack Ecosystem:</strong> Deep integrations across HubSpot CRM, Slack alerts, transactional emails, and real-time analytics.</span>
+              </li>
+              <li>
+                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8"/><path d="M8 12h8"/></svg>
+                <span><strong>AI &amp; Developer Tooling:</strong> Custom AI growth agents, automated reporting, and CLI launch tooling (<code>$ infusedpath launch --init</code>).</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="project-tags">
+            <span class="project-tag tag-emerald">Product Launch Automation</span>
+            <span class="project-tag tag-emerald">Automation Builder Agency</span>
+            <span class="project-tag">AI Agents &amp; n8n</span>
+            <span class="project-tag">HubSpot &amp; Slack APIs</span>
+            <span class="project-tag">Next.js &amp; React</span>
+            <span class="project-tag">Webhooks &amp; Python</span>
+          </div>
+
+          <div class="project-actions">
+            <a href="https://infusedpath.in" target="_blank" rel="noopener noreferrer" class="project-btn btn-launch">
+              <span>Book Launch Call</span>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <span class="project-btn btn-terminal"><code>$ infusedpath launch --init</code></span>
+            <a href="https://github.com/YashAi-Tech" target="_blank" rel="noopener noreferrer" class="project-btn btn-outline">
+              <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              GitHub ★
+            </a>
+          </div>
         </div>
-        <div class="project-img-wrap">
-          <div class="project-img-inner">
-            <p class="project-placeholder">🚀<br/>Projects<br/>In Development</p>
+
+        <div class="project-browser-frame">
+          <div class="browser-bar">
+            <div class="browser-dots">
+              <span class="browser-dot dot-red"></span>
+              <span class="browser-dot dot-yellow"></span>
+              <span class="browser-dot dot-green"></span>
+            </div>
+            <div class="browser-address">
+              <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <span>https://infusedpath.in</span>
+            </div>
+          </div>
+          <div class="browser-img-wrap">
+            <img src="infusedpath-preview.png" alt="InfusedPath - Product Launch & Business Automation Agency" class="browser-img" loading="lazy" />
           </div>
         </div>
       </div>
@@ -514,7 +641,7 @@
   });
 
   // Typing animation — same logic as original Banner.tsx
-  const texts = ["Website Designer", "UI/UX Designer", "Vibe Coder"];
+  const texts = ["Website Designer", "UI/UX Designer", "Automation Builder & Founder", "Vibe Coder"];
   let idx = 0, displayed = "", deleting = false, speed = 100;
   const el = document.getElementById("typed");
   function type() {
